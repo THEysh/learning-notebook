@@ -1,0 +1,82 @@
+# 网站的基本URL
+baseURL: "www.loveyousomuch.top"
+# 网站标题
+title: Hello
+# 分页器大小，即每页显示的文章数量
+pagination.pagerSize: 1000
+# 使用的主题名称
+theme: PaperMod
+
+# 菜单配置
+menu:
+  main:
+    - identifier: categories # 菜单项标识符
+      name: categories # 菜单项显示名称
+      url: /categories/ # 菜单项链接
+      weight: 10 # 菜单项权重，用于排序
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 30
+
+socialIcons:
+  - name: "kofi"
+    url: "github.com"
+
+# 自定义参数配置
+params:
+  assets:
+      disableHLJS: true
+  description: "ExampleSite description" # 网站描述
+  keywords: [Blog, Portfolio, PaperMod] # 网站关键词
+  author: 杨盛晖 # 作者名称
+  DateFormat: "2006-01-02" # 日期格式
+  defaultTheme: auto # 默认主题模式，可选值：dark, light, auto
+  disableThemeToggle: false # 是否禁用主题切换按钮
+  ShowReadingTime: true # 是否显示阅读时间
+  ShowShareButtons: false # 是否显示分享按钮
+  ShowPostNavLinks: true # 是否显示文章导航链接
+  ShowBreadCrumbs: true # 是否显示导航指示(例如：Home>>Posts)
+  ShowCodeCopyButtons: true # 是否显示代码复制按钮
+  ShowWordCount: true # 是否显示字数统计
+  UseHugoToc: true # 是否使用Hugo自动生成目录
+  enableEmoji: true # 允许 emoji
+  # 配置首页信息模式
+  homeInfoParams:
+    Title: "Hello \U0001F44B" # 首页信息标题
+    Content: Welcome # 首页信息内容
+  fuseOpts:
+    isCaseSensitive: false # 是否大小写敏感
+    shouldSort: true # 是否排序
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+    includeMatches: true  
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # 可以 unsafe，有些 html 标签和样式可能需要
+  highlight:
+    anchorLineNos: false # 不要给行号设置锚标
+    codeFences: true # 代码围栏
+    noClasses: false # TODO: 不知道干啥的，暂时没必要了解，不影响展示
+    lineNos: true # 代码行
+    lineNumbersInTable: false # 不要设置成 true，否则如果文章开头是代码的话，摘要会由一大堆数字(即代码行号)开头文章
+    # 这里设置 style 没用，得自己加 css
+    # style: "github-dark"
+    # style: monokai
+
+
+  
