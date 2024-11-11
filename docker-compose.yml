@@ -1,9 +1,17 @@
-version: '3'
-services:
-  app:
-    image: notebook
-    ports:
-      - "1313:1313"
-    volumes:
-      - ./:/app
+version: '3.8'
 
+services:
+  my_container:
+    image: hugo_image
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hugo-learning-notebook
+    volumes:
+      - ./:/app  # 将本地目录映射到容器内的 /app 目录
+    ports:
+      - "1313:1313"  # 将主机的 1313 端口映射到容器的 1313 端口
+    command: hugo server --bind=0.0.0.0  # 容器启动后执行的命令
+    restart: always  # 设置自动重启策略
+
+# docker-compose up -d

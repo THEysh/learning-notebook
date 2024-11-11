@@ -1,12 +1,19 @@
-# 使用官方的Hugo镜像作为基础镜像
-FROM hugo:latest
+FROM ubuntu:latest
+# 设置环境变量，避免交互式配置
+ENV DEBIAN_FRONTEND=noninteractive
 # 设置工作目录
 WORKDIR /app
-# 将当前目录下的所有文件复制到容器的/app目录下
+
+# 复制项目文件到容器中
 COPY . .
-# 构建Hugo站点
+
+# 解压Hugo压缩包并移动到系统路径
+RUN tar -xzf hugofiles/hugo_extended_0.125.7_Linux-64bit.tar.gz -C hugofiles/ && \
+    mv hugofiles/hugo /usr/local/bin/ 
+
+# 暴露Hugo服务器的端口
 EXPOSE 1313
 
-CMD ["hugo", "server", "--bind=0.0.0.0"]
 
-#docker build -t notebook .
+# docker build -t hugo_image .
+# docker run -it --name my_container hugo_image bash 
