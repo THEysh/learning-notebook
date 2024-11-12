@@ -39,8 +39,6 @@ categories: ['数学']
 
 $$f'(x_0)=\lim_{\Delta x\to0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x\to0}\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}\:.$$
 
-当然，$\left.\frac{\mathrm{d}y}{\mathrm{d}x}\right|_{x=x_{0}},\left.\frac{\mathrm{d}[f(x)]}{\mathrm{d}x}\right|_{x=x_{0}},y^{\prime}(x_{0})$\text{或}$y^\prime|_{x=x_{0}}$这些符号记法与$f^{\prime}(x_{0})$等价。“导数”这个名词被认为是拉格朗日最先使用的，记号$f^{\prime}(x_0),y^{\prime}|_{x=x_0}$多次出现在拉格朗日的文章中。
-
 ![](https://pic.imgdb.cn/item/66f6b76af21886ccc053f478.png)
 
 ![](https://pic.imgdb.cn/item/66f6b7b7f21886ccc054558e.png)

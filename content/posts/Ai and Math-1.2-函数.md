@@ -12,7 +12,7 @@ categories: ['数学']
 ## 函数
 
 - 一个可视化的网站：https://www.desmos.com/?lang=zh-CN
-另一个可视化网站：https://www.geogebra.org/
+- 另一个可视化网站：https://www.geogebra.org/
 
 安装markdown，查看文档
 ![安装markdown](https://pic.imgdb.cn/item/66f5784bf21886ccc0274cf8.png)
@@ -20,12 +20,10 @@ categories: ['数学']
 
 - 量和量之间的关系如下所示可称为**函数**：
     $$ 
-    \begin{align*}
-      S_1 &= \pi r^2 \\
-      S_2 &= a^2 \\
-      S_3 &= ab \\
-      S_4 &= \frac{(a+b)h}{2}
-    \end{align*}
+    S_1 = \pi r^2 ;
+    S_2 = a^2 ;
+    S_3 = ab ;
+    S_4 = \frac{(a+b)h}{2};
     $$
 
 - 其中，$y=f(x)$(其中x是自变量，y是因变量)。
@@ -46,10 +44,10 @@ categories: ['数学']
 
 - **分段函数：**
   $$
-  f(x) = \begin{cases}
-    \sqrt{x}, & x \geq 0 \\
+  f(x) = \begin{align*}
+    \sqrt{x}, & x \geq 0 \newline
     -x, & x < 0
-  \end{cases}
+  \end{align*}
   $$
 
 - **反函数：**
