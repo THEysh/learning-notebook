@@ -1,17 +1,171 @@
-# 网站的基本URL
-baseURL: "www.loveyousomuch.top"
-# 分页器大小，即每页显示的文章数量
-paginate: 300  # 每页显示的文章数量
-# 主要部分，通常设置为 "post" 或其他你用来发布文章的部分
-mainSections:
-  - post
+# # 网站的基本URL
+# baseURL: "www.loveyousomuch.top"
+# # 分页器大小，即每页显示的文章数量
+# paginate: 300  # 每页显示的文章数量
+# # 主要部分，通常设置为 "post" 或其他你用来发布文章的部分
+# mainSections:
+#   - post
 
+# # 使用的主题名称
+# theme: PaperMod
+# # config.yaml
+# title: "Hello"
+
+# # 菜单配置
+# menu:
+#   main:
+#     - identifier: categories # 菜单项标识符
+#       name: categories # 菜单项显示名称
+#       url: /categories/ # 菜单项链接
+#       weight: 10 # 菜单项权重，用于排序
+#     - identifier: tags
+#       name: tags
+#       url: /tags/
+#       weight: 20
+#     - identifier: search
+#       name: Search
+#       url: /search/
+#       weight: 30
+
+# # 自定义参数配置
+# params:
+#   assets:
+#       disableHLJS: true
+#   description: "Leainging" # 网站描述
+#   keywords: [Blog] # 网站关键词
+#   author: 杨盛晖 # 作者名称
+#   DateFormat: "2006-01-02" # 日期格式
+#   defaultTheme: auto # 默认主题模式，可选值：dark, light, auto
+#   disableThemeToggle: false # 是否禁用主题切换按钮
+#   ShowReadingTime: false # 是否显示阅读时间
+#   ShowShareButtons: false # 是否显示分享按钮
+#   ShowPostNavLinks: true # 是否显示文章导航链接
+#   ShowBreadCrumbs: true # 是否显示导航指示(例如：Home>>Posts)
+#   ShowCodeCopyButtons: true # 是否显示代码复制按钮
+#   ShowWordCount: true # 是否显示字数统计
+#   UseHugoToc: true # 是否使用Hugo自动生成目录
+#   enableEmoji: true # 允许 emoji
+#   # 配置首页信息模式
+#   homeInfoParams:
+#     Title: "Hello \U0001F44B" # 首页信息标题
+#     Content: Welcome # 首页信息内容
+#   fuseOpts:
+#     isCaseSensitive: false # 是否大小写敏感
+#     shouldSort: true # 是否排序
+#     location: 0
+#     distance: 1000
+#     threshold: 0.4
+#     minMatchCharLength: 0
+#     # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+#     keys: ["title", "permalink", "summary", "content"]
+#     includeMatches: true  
+# outputs:
+#   home:
+#     - HTML
+#     - RSS
+#     - JSON # necessary for search
+# markup:
+#   goldmark:
+#     renderer:
+#       unsafe: true # 可以 unsafe，有些 html 标签和样式可能需要
+#   highlight:
+#     anchorLineNos: false # 不要给行号设置锚标
+#     codeFences: true # 代码围栏
+#     noClasses: false # TODO: 不知道干啥的，暂时没必要了解，不影响展示
+#     lineNos: true # 代码行
+#     lineNumbersInTable: false # 不要设置成 true，否则如果文章开头是代码的话，摘要会由一大堆数字(即代码行号)开头文章
+
+# 网站的基本URL
+baseURL: "https://examplesite.com/"
+title: Hello # 网站标题
+# 分页器大小，即每页显示的文章数量
+paginate: 300
 # 使用的主题名称
 theme: PaperMod
-# config.yaml
-title: "Hello"
 
-    
+# 是否启用 robots.txt 文件
+enableRobotsTXT: true
+# 是否构建草稿文章
+buildDrafts: false
+# 是否构建未来发布的文章
+buildFuture: false
+# 是否构建已过期的文章
+buildExpired: false
+
+# 压缩设置
+minify:
+  disableXML: true # 是否禁用 XML 压缩
+  minifyOutput: true # 是否压缩输出
+
+# 自定义参数配置
+params:
+  env: production # 环境设置，用于启用 Google Analytics、OpenGraph、Twitter Cards 和 Schema
+  description: "Learning" # 网站描述
+  keywords: [Blog] # 网站关键词
+  author: 杨盛晖 # 作者名称
+  images: ["<link or path of image for opengraph, twitter-cards>"] # OpenGraph 和 Twitter Cards 图片链接
+  DateFormat: "2006-01-02" # 日期格式
+  defaultTheme: auto # 默认主题模式，可选值：dark, light, auto
+  disableThemeToggle: false # 是否禁用主题切换按钮
+  ShowReadingTime: true # 是否显示阅读时间
+  ShowShareButtons: false # 是否显示分享按钮
+  ShowPostNavLinks: true # 是否显示文章导航链接（上一篇/下一篇）
+  ShowBreadCrumbs: true # 是否显示导航指示（例如：Home>>Posts）
+  ShowCodeCopyButtons: true # 是否显示代码复制按钮
+  ShowWordCount: true # 是否显示字数统计
+  ShowRssButtonInSectionTermList: true # 是否在分类和标签页面显示 RSS 按钮
+  UseHugoToc: true # 是否使用 Hugo 自动生成目录
+  disableSpecial1stPost: false # 是否禁用特殊的第一篇文章处理
+  disableScrollToTop: false # 是否禁用滚动到顶部按钮
+  comments: false # 是否启用评论系统
+  hidemeta: false # 是否隐藏元数据（如作者、日期等）
+  hideSummary: false # 是否隐藏文章摘要
+  showtoc: false # 是否显示文章目录
+  tocopen: false # 是否默认展开文章目录
+
+  label:
+    text: "Home" # 标签文本
+    icon: /apple-touch-icon.png # 标签图标路径
+    iconHeight: 35 # 标签图标高度
+
+  # 配置个人资料模式
+  profileMode:
+    enabled: false # 是否启用个人资料模式
+    title: ExampleSite # 个人资料模式标题
+    subtitle: "This is subtitle" # 个人资料模式副标题
+    imageUrl: "<img location>" # 个人资料图片路径
+    imageWidth: 120 # 个人资料图片宽度
+    imageHeight: 120 # 个人资料图片高度
+    imageTitle: my image # 个人资料图片标题
+    buttons:
+      - name: Posts # 按钮名称
+        url: posts # 按钮链接
+      - name: Tags # 按钮名称
+        url: tags # 按钮链接
+
+  # 配置首页信息模式
+  homeInfoParams:
+    Title: "Hi there \U0001F44B" # 首页信息标题
+    Content: Welcome # 首页信息内容
+
+  # 封面配置
+  cover:
+    hidden: true # 是否在所有页面隐藏封面，但不在结构化数据中隐藏
+    hiddenInList: true # 是否在列表页面和首页隐藏封面
+    hiddenInSingle: true # 是否在单篇文章页面隐藏封面
+
+  # 搜索配置
+  # 参考：https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false # 是否区分大小写
+    shouldSort: true # 是否排序
+    location: 0 # 位置
+    distance: 1000 # 距离
+    threshold: 0.4 # 阈值
+    minMatchCharLength: 0 # 最小匹配字符长度
+    limit: 10 # 结果限制
+    keys: ["title", "permalink", "summary", "content"] # 搜索键
+
 # 菜单配置
 menu:
   main:
@@ -28,54 +182,14 @@ menu:
       url: /search/
       weight: 30
 
-
-# 自定义参数配置
-params:
-  assets:
-      disableHLJS: true
-  description: "Leainging" # 网站描述
-  keywords: [Blog] # 网站关键词
-  author: 杨盛晖 # 作者名称
-  DateFormat: "2006-01-02" # 日期格式
-  defaultTheme: auto # 默认主题模式，可选值：dark, light, auto
-  disableThemeToggle: false # 是否禁用主题切换按钮
-  ShowReadingTime: false # 是否显示阅读时间
-  ShowShareButtons: false # 是否显示分享按钮
-  ShowPostNavLinks: true # 是否显示文章导航链接
-  ShowBreadCrumbs: true # 是否显示导航指示(例如：Home>>Posts)
-  ShowCodeCopyButtons: true # 是否显示代码复制按钮
-  ShowWordCount: true # 是否显示字数统计
-  UseHugoToc: true # 是否使用Hugo自动生成目录
-  enableEmoji: true # 允许 emoji
-  # 配置首页信息模式
-  homeInfoParams:
-    Title: "Hello \U0001F44B" # 首页信息标题
-    Content: Welcome # 首页信息内容
-  fuseOpts:
-    isCaseSensitive: false # 是否大小写敏感
-    shouldSort: true # 是否排序
-    location: 0
-    distance: 1000
-    threshold: 0.4
-    minMatchCharLength: 0
-    # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
-    keys: ["title", "permalink", "summary", "content"]
-    includeMatches: true  
-outputs:
-  home:
-    - HTML
-    - RSS
-    - JSON # necessary for search
+# 语法高亮配置
+# 参考：https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
 markup:
-  goldmark:
-    renderer:
-      unsafe: true # 可以 unsafe，有些 html 标签和样式可能需要
   highlight:
-    anchorLineNos: false # 不要给行号设置锚标
-    codeFences: true # 代码围栏
-    noClasses: false # TODO: 不知道干啥的，暂时没必要了解，不影响展示
-    lineNos: true # 代码行
-    lineNumbersInTable: false # 不要设置成 true，否则如果文章开头是代码的话，摘要会由一大堆数字(即代码行号)开头文章
-
-
-  
+    noClasses: false # 是否禁用类名
+    anchorLineNos: false # 是否为行号设置锚点
+    codeFences: true # 是否使用代码围栏
+    guessSyntax: true # 是否猜测语法
+    lineNos: true # 是否显示行号
+    style: monokai # 语法高亮风格
