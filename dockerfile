@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . .
 
 # 解压Hugo压缩包并移动到系统路径
-RUN tar -xzf hugofiles/hugo_extended_0.125.7_Linux-64bit.tar.gz -C hugofiles/ && \
+RUN tar -xzf hugofiles/hugo_extended_0.138.0_Linux-64bit.tar.gz -C hugofiles/ && \
     mv hugofiles/hugo /usr/local/bin/ 
 
 # 暴露Hugo服务器的端口
