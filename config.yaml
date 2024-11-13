@@ -1,25 +1,37 @@
-
 # 网站的基本URL
 baseURL: "https://learning-notebook.netlify.app/"
+# baseURL: "http://172.18.55.72:1313"
 title: Hello # 网站标题
 # 分页器大小，即每页显示的文章数量
 paginate: 300
 # 使用的主题名称
 theme: PaperMod
+# 菜单配置
+menu:
+  main:
+    - identifier: categories # 菜单项标识符
+      name: Categories # 菜单项显示名称
+      url: /categories/ # 菜单项链接
+      weight: 10 # 菜单项权重，用于排序
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 30
 
-# 是否启用 robots.txt 文件
-enableRobotsTXT: true
-# 是否构建草稿文章
-buildDrafts: false
-# 是否构建未来发布的文章
-buildFuture: false
-# 是否构建已过期的文章
-buildExpired: false
-
-# 压缩设置
-minify:
-  disableXML: true # 是否禁用 XML 压缩
-  minifyOutput: true # 是否压缩输出
+# 语法高亮配置
+# 参考：https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+markup:
+  highlight:
+    noClasses: false # 是否禁用类名
+    anchorLineNos: false # 是否为行号设置锚点
+    codeFences: true # 是否使用代码围栏
+    guessSyntax: true # 是否猜测语法
+    lineNos: true # 是否显示行号
+    style: monokai # 语法高亮风格
 
 # 自定义参数配置
 params:
@@ -46,38 +58,29 @@ params:
   hideSummary: false # 是否隐藏文章摘要
   showtoc: false # 是否显示文章目录
   tocopen: false # 是否默认展开文章目录
-
+  cover:
+    # hidden: false # 是否在所有页面隐藏封面，但不在结构化数据中隐藏
+    # hiddenInList: false # 是否在列表页面和首页隐藏封面
+    # hiddenInSingle: false # 是否在单篇文章页面隐藏封面
+    image: "https://pic.imgdb.cn/item/6734a6a5d29ded1a8ca2a136.png"
+      # can also paste direct link from external site
+      # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
+    alt: "封面"
+    caption: "封面"
+    relative: false # To use relative path for cover image, used in hugo Page-bundles
   label:
     text: "Home" # 标签文本
     icon: /apple-touch-icon.png # 标签图标路径
     iconHeight: 35 # 标签图标高度
 
-  # 配置个人资料模式
-  profileMode:
-    enabled: false # 是否启用个人资料模式
-    title: ExampleSite # 个人资料模式标题
-    subtitle: "This is subtitle" # 个人资料模式副标题
-    imageUrl: "<img location>" # 个人资料图片路径
-    imageWidth: 120 # 个人资料图片宽度
-    imageHeight: 120 # 个人资料图片高度
-    imageTitle: my image # 个人资料图片标题
-    buttons:
-      - name: Posts # 按钮名称
-        url: posts # 按钮链接
-      - name: Tags # 按钮名称
-        url: tags # 按钮链接
-
   # 配置首页信息模式
   homeInfoParams:
     Title: "Hi there \U0001F44B" # 首页信息标题
     Content: Welcome # 首页信息内容
-
-  # 封面配置
-  cover:
-    hidden: true # 是否在所有页面隐藏封面，但不在结构化数据中隐藏
-    hiddenInList: true # 是否在列表页面和首页隐藏封面
-    hiddenInSingle: true # 是否在单篇文章页面隐藏封面
-
+  socialIcons: # optional
+    - name: "loveyousomuch"
+      url: "https://www.loveyousomuch.top"
+  
   # 搜索配置
   # 参考：https://fusejs.io/api/options.html
   fuseOpts:
@@ -90,30 +93,8 @@ params:
     limit: 10 # 结果限制
     keys: ["title", "permalink", "summary", "content"] # 搜索键
 
-# 菜单配置
-menu:
-  main:
-    - identifier: categories # 菜单项标识符
-      name: categories # 菜单项显示名称
-      url: /categories/ # 菜单项链接
-      weight: 10 # 菜单项权重，用于排序
-    - identifier: tags
-      name: tags
-      url: /tags/
-      weight: 20
-    - identifier: search
-      name: Search
-      url: /search/
-      weight: 30
-
-# 语法高亮配置
-# 参考：https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
-pygmentsUseClasses: true
-markup:
-  highlight:
-    noClasses: false # 是否禁用类名
-    anchorLineNos: false # 是否为行号设置锚点
-    codeFences: true # 是否使用代码围栏
-    guessSyntax: true # 是否猜测语法
-    lineNos: true # 是否显示行号
-    style: monokai # 语法高亮风格
+  outputs:
+    home:
+      - HTML
+      - RSS
+      - JSON
