@@ -168,18 +168,18 @@ a, b = 1, 3
 definite_integral = sp.integrate(f, (x, a, b))
 print(f'定积分从 {a} 到 {b}: {definite_integral}')
 ```
-
-<img src="https://pic.imgdb.cn/item/66fa425bf21886ccc08c77aa.png" alt="image.png">
+![](https://pic.imgdb.cn/item/66fa425bf21886ccc08c77aa.png")
 
 ### 积分应用
-<img src="https://pic.imgdb.cn/item/66fa43a6f21886ccc08d9f94.png" alt="image.png">
 
-<img src="https://pic.imgdb.cn/item/66fa4420f21886ccc08e0c8e.png" alt="image.png">
+![](https://pic.imgdb.cn/item/66fa43a6f21886ccc08d9f94.png)
 
-<img src="https://pic.imgdb.cn/item/66fa448ef21886ccc08e7a44.png" alt="image.png">
+![](https://pic.imgdb.cn/item/66fa4420f21886ccc08e0c8e.png)
 
-<img src="https://pic.imgdb.cn/item/66fa44e9f21886ccc08edfc6.png" alt="image.png">
+![](https://pic.imgdb.cn/item/66fa448ef21886ccc08e7a44.png)
 
-<img src="https://pic.imgdb.cn/item/66fa44faf21886ccc08ef0f7.png" alt="image.png">
+![](https://pic.imgdb.cn/item/66fa44e9f21886ccc08edfc6.png)
 
-<img src="https://pic.imgdb.cn/item/66fa4609f21886ccc08ff7a8.png">
+![](https://pic.imgdb.cn/item/66fa44faf21886ccc08ef0f7.png)
+
+![](https://pic.imgdb.cn/item/66fa4609f21886ccc08ff7a8.png)
