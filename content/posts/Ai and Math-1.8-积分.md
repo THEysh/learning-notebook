@@ -172,7 +172,6 @@ print(f'定积分从 {a} 到 {b}: {definite_integral}')
 <img src="https://pic.imgdb.cn/item/66fa425bf21886ccc08c77aa.png" alt="image.png">
 
 ### 积分应用
-
 <img src="https://pic.imgdb.cn/item/66fa43a6f21886ccc08d9f94.png" alt="image.png">
 
 <img src="https://pic.imgdb.cn/item/66fa4420f21886ccc08e0c8e.png" alt="image.png">
