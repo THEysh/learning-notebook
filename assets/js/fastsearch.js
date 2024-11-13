@@ -48,7 +48,7 @@ window.onload = function () {
             }
         }
     };
-    xhr.open('GET', "https://learning-notebook.netlify.app/index.json");
+    xhr.open('GET', "../index.json");
     xhr.send();
 }
 

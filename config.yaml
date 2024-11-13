@@ -1,6 +1,6 @@
 # 网站的基本URL
-baseURL: "https://learning-notebook.netlify.app/"
-# baseURL: "http://172.18.55.72:1313"
+# baseURL: "https://learning-notebook.netlify.app/"
+baseURL: "http://172.18.55.72:1313"
 title: Hello # 网站标题
 # 分页器大小，即每页显示的文章数量
 paginate: 300
@@ -58,16 +58,7 @@ params:
   hideSummary: false # 是否隐藏文章摘要
   showtoc: false # 是否显示文章目录
   tocopen: false # 是否默认展开文章目录
-  cover:
-    # hidden: false # 是否在所有页面隐藏封面，但不在结构化数据中隐藏
-    # hiddenInList: false # 是否在列表页面和首页隐藏封面
-    # hiddenInSingle: false # 是否在单篇文章页面隐藏封面
-    image: "https://pic.imgdb.cn/item/6734a6a5d29ded1a8ca2a136.png"
-      # can also paste direct link from external site
-      # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
-    alt: "封面"
-    caption: "封面"
-    relative: false # To use relative path for cover image, used in hugo Page-bundles
+
   label:
     text: "Home" # 标签文本
     icon: /apple-touch-icon.png # 标签图标路径
