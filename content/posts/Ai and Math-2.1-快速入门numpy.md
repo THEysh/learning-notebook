@@ -1,10 +1,10 @@
 ---
 author: 杨盛晖
 data: 2024-11-04T09:26:00+08:00
-title: Ai and Math-2.1-学习numpy.md
+title: Ai and Math-2.1-快速入门numpy
 featured: true
 draft: false
-tags: ['人工智能数学基础']
+tags: ['人工智能数学基础','numpy']
 categories: ['数学']
 ---
 
