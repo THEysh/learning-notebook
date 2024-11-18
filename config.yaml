@@ -1,5 +1,5 @@
 # 网站的基本URL
-baseURL: "http://110.42.51.96:1002/"
+baseURL: "https://learning-notebook.netlify.app"
 # baseURL: "http://172.18.55.72:1313"
 title: Hello # 网站标题
 # 分页器大小，即每页显示的文章数量

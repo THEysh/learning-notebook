@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: hugo-learning-notebook
+    container_name: hugo-learning-notebook-0.138.0
     volumes:
       - ./:/app  # 将本地目录映射到容器内的 /app 目录
     ports:
